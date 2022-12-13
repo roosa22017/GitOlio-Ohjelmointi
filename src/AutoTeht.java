@@ -12,6 +12,10 @@ public class AutoTeht {
 		olio1.kiihdyta();
 		olio1.naytaTiedot();
 		olio1.tankkaa(6);
+		
+		Auto olio2 = new Auto("BMW", "E87", 10);
+		olio2.naytaTiedot();
+	
 	}
 
 }
@@ -21,6 +25,20 @@ class Auto {
 	public String merkki;
 	public String malli;
 	public int bensanMaara;
+	
+	public Auto()
+	{
+		merkki = "";
+		malli = "";
+		bensanMaara = 0;
+	}
+	
+	public Auto(String merkki, String malli, int bensanMaara)
+	{
+		this.merkki = merkki;
+		this.malli = malli;
+		this.bensanMaara = bensanMaara;
+	}
 	
 	public void jarruta()
 	{
@@ -48,5 +66,5 @@ class Auto {
 		System.out.println("Tankissa bensaa tankkauksen jälkeen: " + (bensanMaara + bensaaLisaa));
 	}
 	
-	}
+}
 	
